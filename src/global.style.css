@@ -1,7 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+html {
+  --bg-color: #1b2735;
+  --main-color: white;
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color);
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--main-color);
+  height: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 
 /*# sourceMappingURL=global.style.css.map */
