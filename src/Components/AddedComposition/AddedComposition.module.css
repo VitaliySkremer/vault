@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  align-self: center;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--input-bg);
+  margin-bottom: 15px;
+}
+
+.button__text {
+  font-size: 18px;
+}
+
+.path__block {
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=AddedComposition.module.css.map */

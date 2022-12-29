@@ -3,6 +3,7 @@
   transition: all 0.5s;
   position: relative;
   padding: 5px 30px;
+  letter-spacing: 0.1em;
 }
 
 .btn__wrapper::before {

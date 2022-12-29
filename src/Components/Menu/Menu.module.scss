@@ -1,0 +1,17 @@
+.menu {
+  padding: 25px;
+  background-color: var(--bg-shadow);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-right: 15px;
+  min-width: 345px;
+  &_item:not(:last-child){
+    margin-bottom: 20px;
+  }
+}
+
+.button__text {
+  font-size: 18px;
+}

@@ -1,7 +1,7 @@
+import {MainBlock} from "../Components/MainBlock/MainBlock";
+
 export const Main = () => {
   return (
-    <div>
-      main
-    </div>
+    <MainBlock/>
   )
 }

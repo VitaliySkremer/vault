@@ -1,0 +1,21 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-shadow-hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal__block {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: black;
+  min-width: 400px;
+  min-height: 300px;
+  max-height: 800px;
+}
