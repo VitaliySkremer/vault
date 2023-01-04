@@ -1,4 +1,4 @@
-import {EKind, IComposition} from "../ListCompositions";
+import { IComposition, EKind } from '../../../Store/Composition';
 import styles from './Composition.module.scss'
 
 interface CompositionProps {

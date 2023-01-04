@@ -8,9 +8,8 @@ import style from './App.module.scss'
 import {MainInfo} from "./Components/MainInfo/MainInfo";
 
 function App() {
-
   return (
-    <div className="App">
+    <div className = "App">
       <Header/>
       <main className='container'>
         <div>

@@ -3,6 +3,7 @@ import {useState} from "react";
 import styles from './AddedComposition.module.scss'
 import {Button} from "../UI/Button/Button";
 import {TextArea} from "../UI/TextArea/TextArea";
+import { Radio } from "../UI/Radio/Radio";
 export const AddedComposition = () => {
 	const [img, setImg] = useState('');
 	return (
@@ -41,7 +42,14 @@ export const AddedComposition = () => {
 				placeholder='краткое описание'
 				style={{marginBottom:'10px'}}
 			/>
-
+			<div>
+				<Radio>
+					Аниме
+				</Radio>
+				<Radio>
+					Книга
+				</Radio>
+			</div>
 			<Button>
 				<span className={styles.button__text}>
 					Добавить
