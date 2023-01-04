@@ -1,0 +1,44 @@
+.select__form {
+  width: 100%;
+  position: relative;
+}
+
+.button {
+  color: var(--main-color);
+  width: 100%;
+  background-color: var(--input-bg);
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 18px;
+  text-align: left;
+}
+.button:hover {
+  background-color: gray;
+}
+
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.list li {
+  border-top: 1px solid gray;
+}
+.list li button {
+  color: var(--main-color);
+  width: 100%;
+  font-size: 18px;
+  text-align: left;
+  padding: 10px;
+  background-color: var(--input-bg);
+}
+.list li button:hover {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=Select.module.css.map */

@@ -25,8 +25,9 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
-
-  & div:not(:last-child) {
-    margin-right: 10px;
-  }
 }
+.select__block div:not(:last-child) {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=AddedComposition.module.css.map */

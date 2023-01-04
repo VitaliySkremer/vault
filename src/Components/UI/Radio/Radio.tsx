@@ -1,14 +1,16 @@
-import {HTMLAttributes, ReactNode} from 'react'
-
-interface IRadio extends HTMLAttributes<HTMLInputElement>{
-  children: ReactNode
+import {InputHTMLAttributes, ReactNode} from 'react'
+import styles from './Radio.module.scss'
+interface IRadio extends InputHTMLAttributes<HTMLInputElement>{
+  children: ReactNode;
 }
 
 export const Radio = ({children,...other}: IRadio) => {
   return (
-    <label>
-      <input type="radio" {...other}/>
-      {children}
+    <label className={styles.label}>
+      <input className={styles.input} type="radio" {...other}/>
+      <span className={styles.span}>
+        {children}
+      </span>
     </label>
   )
 }

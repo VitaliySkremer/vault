@@ -3,9 +3,32 @@ import {useState} from "react";
 import styles from './AddedComposition.module.scss'
 import {Button} from "../UI/Button/Button";
 import {TextArea} from "../UI/TextArea/TextArea";
-import { Radio } from "../UI/Radio/Radio";
+import {EKind, EStatus} from "../../Store/Composition";
+import {Select} from "../UI/Select/Select";
+
+const selectKindList:Array<string> = [
+	EKind.BOOK,
+	EKind.Anime,
+]
+
+const selectStatusList:Array<string> = [
+	EStatus.COMPLETED,
+	EStatus.FUTURE,
+	EStatus.PROCESS,
+]
 export const AddedComposition = () => {
 	const [img, setImg] = useState('');
+	const [kind, setKind] = useState<string>(EKind.Anime);
+	const [status, setStatus] = useState<string>(EStatus.FUTURE);
+
+	const setSelectKind = (item:string) =>{
+		setKind(item);
+	}
+
+	const setSelectStatus = (item:string) =>{
+		setStatus(item);
+	}
+
 	return (
 		<div className={styles.wrapper}>
 			<Input
@@ -33,22 +56,18 @@ export const AddedComposition = () => {
 					style={{marginRight:'10px'}}
 				/>
 				<Input
-					placeholder='частей/серий просмотренно'
+					placeholder='частей/серий просмотрено'
 					type='number'
 					min='0'
 				/>
 			</div>
 			<TextArea
 				placeholder='краткое описание'
-				style={{marginBottom:'10px'}}
+				style={{marginBottom:'15px'}}
 			/>
-			<div>
-				<Radio>
-					Аниме
-				</Radio>
-				<Radio>
-					Книга
-				</Radio>
+			<div className={styles.select__block}>
+				<Select choose={kind} list={selectKindList} setIsChoose={setSelectKind}/>
+				<Select choose={status} list={selectStatusList} setIsChoose={setSelectStatus}/>
 			</div>
 			<Button>
 				<span className={styles.button__text}>
