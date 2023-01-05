@@ -16,7 +16,7 @@ export interface IComposition {
   title: string;
   img: string;
   body: string;
-  rating: 1 | 2 | 3 | 4 | 5;
+  rating: number;
   totalCountParts: number;
   countParts: number;
   status: EStatus;

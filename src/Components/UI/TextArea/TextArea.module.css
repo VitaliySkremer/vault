@@ -8,11 +8,12 @@
   font-size: 18px;
   resize: vertical;
   max-height: 200px;
-  &::placeholder {
-    color: gray;
-  }
-
-  &:hover {
-    background-color: var(--input-bg-hover);
-  }
 }
+.textarea::placeholder {
+  color: gray;
+}
+.textarea:hover {
+  background-color: var(--input-bg-hover);
+}
+
+/*# sourceMappingURL=TextArea.module.css.map */

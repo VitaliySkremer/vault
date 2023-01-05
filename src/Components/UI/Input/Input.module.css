@@ -6,11 +6,12 @@
   outline: none;
   border-radius: 10px;
   font-size: 18px;
-  &::placeholder {
-    color: gray;
-  }
-
-  &:hover {
-    background-color: var(--input-bg-hover);
-  }
 }
+.input::placeholder {
+  color: gray;
+}
+.input:hover {
+  background-color: var(--input-bg-hover);
+}
+
+/*# sourceMappingURL=Input.module.css.map */

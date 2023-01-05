@@ -1,0 +1,26 @@
+.rating__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rating {
+  color: var(--main-color);
+  background-color: transparent;
+  font-size: 24px;
+
+  transition: transform .1s linear;
+
+  &:not(:last-child){
+    margin-right: 15px;
+  }
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.rating__active {
+  color: var(--gold);
+}

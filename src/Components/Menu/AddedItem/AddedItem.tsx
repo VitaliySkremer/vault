@@ -24,7 +24,7 @@ export const AddedItem = () => {
 			</Button>
 			{isModal && (
 				<Modal onClose={onClose}>
-					<AddedComposition/>
+					<AddedComposition onClose={onClose}/>
 				</Modal>
 			)}
 		</>

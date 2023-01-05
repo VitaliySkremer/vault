@@ -12,10 +12,16 @@
   border-top-right-radius: 10px;
   font-size: 18px;
   text-align: left;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   &:hover {
-    background-color: gray;
+    background-color: var(--input-bg-hover);
   }
+}
+
+.isActive {
+  transform: rotateZ(180deg);
 }
 
 .list {
@@ -41,6 +47,11 @@
   }
 
   & li button:hover {
-    background-color: gray;
+    background-color: var(--input-bg-hover);
+  }
+
+  & li button:disabled {
+    background-color: #1d1d1d;
+    cursor: auto;
   }
 }

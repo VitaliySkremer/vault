@@ -1,0 +1,25 @@
+.rating__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rating {
+  color: var(--main-color);
+  background-color: transparent;
+  font-size: 24px;
+  transition: transform 0.1s linear;
+}
+.rating:not(:last-child) {
+  margin-right: 15px;
+}
+.rating:hover {
+  transform: scale(1.5);
+}
+
+.rating__active {
+  color: var(--gold);
+}
+
+/*# sourceMappingURL=Rating.module.css.map */

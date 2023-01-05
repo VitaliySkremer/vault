@@ -1,33 +1,48 @@
 import {Input} from "../UI/Input/Input";
-import {useState} from "react";
 import styles from './AddedComposition.module.scss'
 import {Button} from "../UI/Button/Button";
 import {TextArea} from "../UI/TextArea/TextArea";
 import {EKind, EStatus} from "../../Store/Composition";
 import {Select} from "../UI/Select/Select";
+import {Rating} from "../UI/Rating/Rating";
+import {useAddComposition} from "../../Hooks/useAddComposition";
 
-const selectKindList:Array<string> = [
+const selectKindList:Array<EKind> = [
 	EKind.BOOK,
 	EKind.Anime,
 ]
 
-const selectStatusList:Array<string> = [
+const selectStatusList:Array<EStatus> = [
 	EStatus.COMPLETED,
 	EStatus.FUTURE,
 	EStatus.PROCESS,
 ]
-export const AddedComposition = () => {
-	const [img, setImg] = useState('');
-	const [kind, setKind] = useState<string>(EKind.Anime);
-	const [status, setStatus] = useState<string>(EStatus.FUTURE);
 
-	const setSelectKind = (item:string) =>{
-		setKind(item);
-	}
+interface IAddedCompositionProps {
+	onClose?: ()=>void;
+}
 
-	const setSelectStatus = (item:string) =>{
-		setStatus(item);
-	}
+export const AddedComposition = ({onClose = ()=>{}}:IAddedCompositionProps) => {
+
+	const {
+		title,
+		setTitle,
+		img,
+		setImg,
+		totalCountParts,
+		setTotalCountParts,
+		countParts,
+		setCountParts,
+		body,
+		setBody,
+		kind,
+		setSelectKind,
+		status,
+		setSelectStatus,
+		rating,
+		handlerRating,
+		addComposition
+	} = useAddComposition(onClose);
 
 	return (
 		<div className={styles.wrapper}>
@@ -35,6 +50,8 @@ export const AddedComposition = () => {
 				type='text'
 				placeholder='Название произведения'
 				style={{marginBottom:'15px'}}
+				value={title}
+				onChange={(event)=>setTitle(event.target.value)}
 			/>
 			<Input
 				type='text'
@@ -54,22 +71,31 @@ export const AddedComposition = () => {
 					type='number'
 					min='1'
 					style={{marginRight:'10px'}}
+					value={totalCountParts}
+					onChange={(event)=>setTotalCountParts(event.target.value)}
 				/>
 				<Input
 					placeholder='частей/серий просмотрено'
 					type='number'
 					min='0'
+					value={countParts}
+					onChange={(event)=>setCountParts(event.target.value)}
 				/>
 			</div>
 			<TextArea
 				placeholder='краткое описание'
 				style={{marginBottom:'15px'}}
+				value={body}
+				onChange={(event)=> setBody(event.target.value)}
 			/>
 			<div className={styles.select__block}>
 				<Select choose={kind} list={selectKindList} setIsChoose={setSelectKind}/>
 				<Select choose={status} list={selectStatusList} setIsChoose={setSelectStatus}/>
 			</div>
-			<Button>
+			<div className={styles.rating__block}>
+				<Rating icon='★' rating={rating} countStars={5} setRating={handlerRating}/>
+			</div>
+			<Button onClick={addComposition}>
 				<span className={styles.button__text}>
 					Добавить
 				</span>
