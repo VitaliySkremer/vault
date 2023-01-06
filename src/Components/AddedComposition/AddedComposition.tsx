@@ -2,21 +2,10 @@ import {Input} from "../UI/Input/Input";
 import styles from './AddedComposition.module.scss'
 import {Button} from "../UI/Button/Button";
 import {TextArea} from "../UI/TextArea/TextArea";
-import {EKind, EStatus} from "../../Store/Composition";
 import {Select} from "../UI/Select/Select";
 import {Rating} from "../UI/Rating/Rating";
 import {useAddComposition} from "../../Hooks/useAddComposition";
-
-const selectKindList:Array<EKind> = [
-	EKind.BOOK,
-	EKind.Anime,
-]
-
-const selectStatusList:Array<EStatus> = [
-	EStatus.COMPLETED,
-	EStatus.FUTURE,
-	EStatus.PROCESS,
-]
+import { selectKindList, selectStatusList } from "../../Store/Data";
 
 interface IAddedCompositionProps {
 	onClose?: ()=>void;

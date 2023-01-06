@@ -4,10 +4,12 @@ import {observer} from "mobx-react-lite";
 import {SelectCompositionComponent} from "./SelectCompositionComponent/SelectCompositionComponent";
 
 export const MainInfo = observer(() => {
+	const composition = Composition.selectComposition;
+
 	return (
 		<article className={styles.info__block}>
-				{Composition.selectComposition
-					?<SelectCompositionComponent composition={Composition.selectComposition}/>
+				{composition
+					?<SelectCompositionComponent composition={composition}/>
 					:<div>Выберите произведение</div>
 				}
 		</article>
