@@ -6,25 +6,29 @@ import {Footer} from "./Components/Footer/Footer";
 import {Menu} from "./Components/Menu/Menu";
 import style from './App.module.scss'
 import {MainInfo} from "./Components/MainInfo/MainInfo";
+import { CustomCursor } from './Components/UI/CustomCursor/CustomCursor';
 
 function App() {
   return (
-    <div className = "App">
-      <Header/>
-      <main className='container'>
-        <div>
-          <Menu/>
-        </div>
-        <div className={style.main__content}>
-          <NavigateRoutes/>
-        </div>
-        <div>
-          <MainInfo/>
-        </div>
-      </main>
-      <Footer/>
-      <Snow/>
-    </div>
+    <>
+      <div className = "App">
+        <Header/>
+        <main className='container'>
+          <div>
+            <Menu/>
+          </div>
+          <div className={style.main__content}>
+            <NavigateRoutes/>
+          </div>
+          <div>
+            <MainInfo/>
+          </div>
+        </main>
+        <Footer/>
+        <Snow/>
+      </div>
+      <CustomCursor/>
+    </>
   )
 }
 

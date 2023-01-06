@@ -1,4 +1,4 @@
-import styles from './Header.module.scss'
+import styles from './Header.module.scss';
 import {Navigate} from "../Navigate/Navigate";
 
 

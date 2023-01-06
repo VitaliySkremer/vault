@@ -6,9 +6,9 @@ export const LessMore = ({text}:{text:string}) => {
   const [hide, setHide] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null)
   useLayoutEffect(()=>{
-    if(ref.current) {
-      setIsLessMore(ref.current?.offsetHeight>=120)
-    }
+    setIsLessMore(false);
+    setHide(false);
+    setIsLessMore(text.length >= 150)
   },[text])
 
   return (

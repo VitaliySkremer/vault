@@ -52,6 +52,6 @@
 
   & li button:disabled {
     background-color: #1d1d1d;
-    cursor: auto;
+    pointer-events: none;
   }
 }

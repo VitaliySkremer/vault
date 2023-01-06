@@ -33,6 +33,7 @@ body {
   line-height: 100%;
   color: var(--main-color);
   height: 100%;
+  cursor: none;
 }
 
 button {
