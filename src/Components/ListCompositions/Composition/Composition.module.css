@@ -8,10 +8,10 @@
   border-radius: 10px;
   padding: 15px;
   cursor: pointer;
-  transition: background-color .2s ease;
-  &:hover {
-    background-color: var(--bg-shadow-hover);
-  }
+  transition: background-color 0.2s ease;
+}
+.composition:hover {
+  background-color: var(--bg-shadow-hover);
 }
 
 .img {
@@ -52,3 +52,5 @@
 .active {
   background-color: rebeccapurple;
 }
+
+/*# sourceMappingURL=Composition.module.css.map */
