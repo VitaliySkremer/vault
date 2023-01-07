@@ -5,6 +5,7 @@ import {LessMore} from "../../UI/LessMore/LessMore";
 import {Rating} from "../../UI/Rating/Rating";
 import {Select} from "../../UI/Select/Select";
 import {selectStatusList} from "../../../Store/Data";
+import { Button } from "../../UI/Button/Button";
 interface ISelectCompProps {
   composition: IComposition;
 }
@@ -38,8 +39,11 @@ export const SelectCompositionComponent = ({composition}:ISelectCompProps) => {
           setIsChoose={setSelectStatus}
         />
       </div>
-      <div>
+      <div className={styles.wrapper__block}>
         <Rating countStars={5} rating={rating} setRating={setRating} icon='★'/>
+      </div>
+      <div>
+        <Button>Сохранить</Button>
       </div>
     </div>
   )
