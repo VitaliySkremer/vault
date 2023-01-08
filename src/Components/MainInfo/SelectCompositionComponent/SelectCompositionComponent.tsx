@@ -6,6 +6,8 @@ import {Rating} from "../../UI/Rating/Rating";
 import {Select} from "../../UI/Select/Select";
 import {selectStatusList} from "../../../Store/Data";
 import { Button } from "../../UI/Button/Button";
+import Composition from "../../../Store/Composition";
+
 interface ISelectCompProps {
   composition: IComposition;
 }
@@ -21,6 +23,10 @@ export const SelectCompositionComponent = ({composition}:ISelectCompProps) => {
 
   const setSelectStatus = (item:EStatus) =>{
     setStatus(item);
+  }
+
+  const deleteComp = () =>{
+    Composition.removeComposition(composition.id);
   }
 
   return (
@@ -43,7 +49,8 @@ export const SelectCompositionComponent = ({composition}:ISelectCompProps) => {
         <Rating countStars={5} rating={rating} setRating={setRating} icon='★'/>
       </div>
       <div>
-        <Button>Сохранить</Button>
+        <Button style={{marginRight: '10px'}}>Сохранить</Button>
+        <Button onClick={deleteComp}>Удалить</Button>
       </div>
     </div>
   )

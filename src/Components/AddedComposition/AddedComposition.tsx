@@ -20,8 +20,6 @@ export const AddedComposition = ({onClose = ()=>{}}:IAddedCompositionProps) => {
 		setImg,
 		totalCountParts,
 		setTotalCountParts,
-		countParts,
-		setCountParts,
 		body,
 		setBody,
 		kind,
@@ -59,16 +57,8 @@ export const AddedComposition = ({onClose = ()=>{}}:IAddedCompositionProps) => {
 					placeholder='Всего частей/серий'
 					type='number'
 					min='1'
-					style={{marginRight:'10px'}}
 					value={totalCountParts}
 					onChange={(event)=>setTotalCountParts(event.target.value)}
-				/>
-				<Input
-					placeholder='частей/серий просмотрено'
-					type='number'
-					min='0'
-					value={countParts}
-					onChange={(event)=>setCountParts(event.target.value)}
 				/>
 			</div>
 			<TextArea
